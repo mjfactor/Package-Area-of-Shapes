@@ -3,7 +3,7 @@
 This is a Python library for performing arithmetic operations related to the area of different shapes.
 
 ## Installation
-Visit: https://pypi.org/project/AreaOfShapesLib/0.2/
+Visit: https://pypi.org/project/AreaOfShapesLib
 
 or
 To install this library, you can use pip:
