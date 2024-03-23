@@ -1,2 +1,2 @@
-from areaofShapesLib.myFunctions import ArithmeticOperations
+from areaofShapesLib.myFunctions import *
 

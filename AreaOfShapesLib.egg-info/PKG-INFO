@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: AreaOfShapesLib
-Version: 0.2
+Version: 0.6
 Summary: A Python library for performing arithmetic operations related to the area of different shapes
 Home-page: https://github.com/mjfctor/ArithmeticOperations
 Author: mjfctor
@@ -15,37 +15,40 @@ Classifier: Programming Language :: Python :: 3.7
 Classifier: Programming Language :: Python :: 3.8
 Classifier: Programming Language :: Python :: 3.9
 Description-Content-Type: text/markdown
+License-File: LICENSE
 
-# ArithmeticOperations Library
+# Get the Area of Shapes Library
 
 This is a Python library for performing arithmetic operations related to the area of different shapes.
 
 ## Installation
+Visit: https://pypi.org/project/AreaOfShapesLib/0.2/
 
+or
 To install this library, you can use pip:
 
 ```bash
-pip install AreaOfShapesLib==0.2
+pip install AreaOfShapesLib
 ```
 
 ## Usage
 Import the Library Using:
 ```python
-from areaofShapesLib import ArithmeticOperations
+from areaofShapesLib import *
 ```
 ## Demo
 Here are some examples of how to use the library:
 ```python
 # Calculate the area of a triangle
-area = ArithmeticOperations.area_of_triangle(10, 5)
+area = area_of_triangle(10, 5)
 print(area)  # Output: 25
 
 # Calculate the area of a circle
-area = ArithmeticOperations.area_of_circle(5)
+area = area_of_circle(5)
 print(area)  # Output: 78.53981633974483
 
 # Calculate the area of a rectangle
-area = ArithmeticOperations.area_of_rectangle(10, 5)
+area = area_of_rectangle(10, 5)
 print(area)  # Output: 50
 ```
 
