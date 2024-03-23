@@ -1,4 +1,4 @@
-# ArithmeticOperations Library
+# Get the Area of Shapes Library
 
 This is a Python library for performing arithmetic operations related to the area of different shapes.
 
@@ -7,7 +7,7 @@ This is a Python library for performing arithmetic operations related to the are
 To install this library, you can use pip:
 
 ```bash
-pip install ArithmeticOperations
+pip install AreaOfShapesLib==0.2
 ```
 
 ## Usage

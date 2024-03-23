@@ -1,4 +1,3 @@
-README.md
 setup.py
 AreaOfShapesLib.egg-info/PKG-INFO
 AreaOfShapesLib.egg-info/SOURCES.txt

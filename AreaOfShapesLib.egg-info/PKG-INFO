@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: AreaOfShapesLib
-Version: 0.1
+Version: 0.2
 Summary: A Python library for performing arithmetic operations related to the area of different shapes
 Home-page: https://github.com/mjfctor/ArithmeticOperations
 Author: mjfctor
@@ -25,7 +25,7 @@ This is a Python library for performing arithmetic operations related to the are
 To install this library, you can use pip:
 
 ```bash
-pip install ArithmeticOperations
+pip install AreaOfShapesLib==0.2
 ```
 
 ## Usage
