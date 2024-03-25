@@ -1,6 +1,6 @@
 # Get the Area of Shapes Library
 
-This is a Python library for performing arithmetic operations related to the area of different shapes.
+This is a simple Python library for performing arithmetic operations related to the area of different shapes.
 
 ## Installation
 Visit: https://pypi.org/project/AreaOfShapesLib
