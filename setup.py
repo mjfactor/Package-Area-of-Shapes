@@ -9,23 +9,12 @@ from os import path
 
 HERE = path.abspath(path.dirname(__file__))
 
-latest_tag = (
-    subprocess.run(['git', 'describe', '--tags'], stdout=subprocess.PIPE)
-    .stdout.strip()
-    .decode('utf-8')
-)
-if "-" in latest_tag:
-    v, i, s = latest_tag.split("-")
-    latest_tag = v + "+" + i + ".git" + s
-assert re.match(r"v\d+\.\d+\.\d+(-\d+-g[0-9a-f]+)?", latest_tag)
-assert "." in latest_tag
-
 with open(path.join(HERE, 'readme.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
     name='AreaOfShapesLib',
-    version=latest_tag,
+    version="1.0.6",
     packages=find_packages(),
     url='https://github.com/mjfctor/ArithmeticOperations',
     license='MIT',
