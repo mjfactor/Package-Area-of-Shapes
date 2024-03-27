@@ -9,12 +9,15 @@ from os import path
 
 HERE = path.abspath(path.dirname(__file__))
 
+# Get Latest Tag
+latest_tag = subprocess.check_output(["git", "describe", "--tags"]).strip().decode('utf-8')
+
 with open(path.join(HERE, 'readme.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
     name='AreaOfShapesLib',
-    version="2.0.2",
+    version=latest_tag,
     packages=find_packages(),
     url='https://github.com/mjfctor/ArithmeticOperations',
     license='MIT',

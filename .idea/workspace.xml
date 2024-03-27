@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27d0f3ef-f755-48aa-98f7-104072a8eb29" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/python-publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/python-publish.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/areaofShapesLib/readme.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +95,7 @@
       <workItem from="1711203779463" duration="43000" />
       <workItem from="1711334821376" duration="119000" />
       <workItem from="1711346125409" duration="1774000" />
-      <workItem from="1711515316886" duration="6545000" />
+      <workItem from="1711515316886" duration="6853000" />
     </task>
     <servers />
   </component>
