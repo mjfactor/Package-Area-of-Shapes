@@ -10,14 +10,22 @@ from os import path
 HERE = path.abspath(path.dirname(__file__))
 
 # Get Latest Tag
-latest_tag = subprocess.check_output(["git", "describe", "--tags"]).strip().decode('utf-8')
+git_describe_output = subprocess.check_output(["git", "describe", "--tags"]).strip().decode('utf-8')
+# Extract the tag and the number of additional commits
+match = re.match(r'(\d+\.\d+\.\d+)-(\d+)-g[a-f0-9]+', git_describe_output)
+if match:
+    # Use the tag as the version, and append the number of additional commits as a post-release segment
+    version = f'{match.group(1)}.post{match.group(2)}'
+else:
+    # If the output does not match the expected format, use the whole output as the version
+    version = git_describe_output
 
 with open(path.join(HERE, 'readme.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
     name='AreaOfShapesLib',
-    version=latest_tag,
+    version=version,
     packages=find_packages(),
     url='https://github.com/mjfctor/ArithmeticOperations',
     license='MIT',
