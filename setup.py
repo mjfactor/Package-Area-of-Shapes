@@ -9,11 +9,17 @@ from os import path
 
 HERE = path.abspath(path.dirname(__file__))
 
-# Get the latest tag
-try:
-    latest_tag = subprocess.check_output(["git", "describe", "--tags"]).strip().decode('utf-8')
-except subprocess.CalledProcessError:
-    latest_tag = "0.0.1"  # Default version if not a Git repository
+latest_tag = (
+    subprocess.run(['git', 'describe', '--tags'], stdout=subprocess.PIPE)
+    .stdout.strip()
+    .decode('utf-8')
+)
+if "-" in latest_tag:
+    v, i, s = latest_tag.split("-")
+    latest_tag = v + "+" + i + ".git" + s
+
+assert "-" not in latest_tag
+assert "." in latest_tag
 
 with open(path.join(HERE, 'readme.md'), encoding='utf-8') as f:
     long_description = f.read()
