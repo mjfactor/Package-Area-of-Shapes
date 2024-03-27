@@ -1,3 +1,6 @@
+import re
+import subprocess
+
 from setuptools import setup, find_packages
 
 from codecs import open
@@ -5,12 +8,15 @@ from os import path
 
 HERE = path.abspath(path.dirname(__file__))
 
+# Get the latest tag in Git
+latest_tag = subprocess.getoutput('git describe --tags --abbrev=0')
+version = re.search(r'\d+\.\d+', latest_tag).group()
 with open(path.join(HERE, 'readme.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
     name='AreaOfShapesLib',
-    version='0.6',
+    version=version,
     packages=find_packages(),
     url='https://github.com/mjfctor/ArithmeticOperations',
     license='MIT',
