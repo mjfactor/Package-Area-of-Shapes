@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27d0f3ef-f755-48aa-98f7-104072a8eb29" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AreaOfShapesLib.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AreaOfShapesLib.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AreaOfShapesLib.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AreaOfShapesLib.egg-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/AreaOfShapesLib-0.0.0-py3-none-any.whl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/AreaOfShapesLib-2.0.0.post6.tar.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-    </list>
+    <list default="true" id="27d0f3ef-f755-48aa-98f7-104072a8eb29" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +93,7 @@
       <workItem from="1711203779463" duration="43000" />
       <workItem from="1711334821376" duration="119000" />
       <workItem from="1711346125409" duration="1774000" />
-      <workItem from="1711515316886" duration="8119000" />
+      <workItem from="1711515316886" duration="8470000" />
     </task>
     <servers />
   </component>
