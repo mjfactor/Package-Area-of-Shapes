@@ -9,12 +9,8 @@ from os import path
 
 HERE = path.abspath(path.dirname(__file__))
 
-# Get the latest tag in Git
-latest_tag = subprocess.run(['git', 'describe', '--tags'], stdout=subprocess.PIPE).stdout.decode('utf-8').strip()
-assert "." in latest_tag, f"Invalid tag: {latest_tag}"
-assert os.path.exists(path.join(HERE, 'arithmetic_operations', 'version.py')), "version.py not found"
-with open(path.join(HERE, 'arithmetic_operations', 'version.py'), encoding='utf-8') as f:
-    f.write(f'__version__ = "{latest_tag}"')
+# Get the latest tag
+latest_tag = subprocess.check_output(["git", "describe", "--tags"]).strip().decode('utf-8')
 
 with open(path.join(HERE, 'readme.md'), encoding='utf-8') as f:
     long_description = f.read()
