@@ -14,7 +14,7 @@ with open(path.join(HERE, 'readme.md'), encoding='utf-8') as f:
 
 setup(
     name='AreaOfShapesLib',
-    version="1.0.6",
+    version="1.0.7",
     packages=find_packages(),
     url='https://github.com/mjfctor/ArithmeticOperations',
     license='MIT',
