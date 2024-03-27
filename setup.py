@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 latest_tag = subprocess.getoutput('git describe --tags --abbrev=0')
 
 # Parse the tag to get the version number
-match = re.search(r'\d+\.\d+', latest_tag)
+match = re.search(r'\d+\.\d+\.\d+', latest_tag)  # Modified regular expression
 if match is None:
     raise ValueError("No version number found in Git tag")
 version = match.group()
