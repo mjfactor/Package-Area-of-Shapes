@@ -17,8 +17,7 @@ latest_tag = (
 if "-" in latest_tag:
     v, i, s = latest_tag.split("-")
     latest_tag = v + "+" + i + ".git" + s
-
-assert "-" not in latest_tag
+assert re.match(r"v\d+\.\d+\.\d+(-\d+-g[0-9a-f]+)?", latest_tag)
 assert "." in latest_tag
 
 with open(path.join(HERE, 'readme.md'), encoding='utf-8') as f:
