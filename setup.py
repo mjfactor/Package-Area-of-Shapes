@@ -7,12 +7,10 @@ from setuptools import setup, find_packages
 from codecs import open
 from os import path
 
-# Find the root directory of the git repository
-git_root = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).strip().decode('utf-8')
+HERE = path.abspath(path.dirname(__file__))
 
-# Check if the current directory is a git repository and it has at least one tag
-if os.path.exists(os.path.join(git_root, '.git')) and subprocess.call(['git', 'tag'], stdout=subprocess.DEVNULL,
-                                                                      stderr=subprocess.DEVNULL) == 0:
+# Check if the current directory is a git repository it has at least one tag
+if os.path.exists('.git') and subprocess.call(['git', 'tag'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL) == 0:
     # Get Latest Tag
     git_describe_output = subprocess.check_output(["git", "describe", "--tags"]).strip().decode('utf-8')
     # Extract the tag and the number of additional commits
@@ -27,7 +25,7 @@ else:
     version = '0.0.0'  # Default version if not a git repository or no tags
 
 # Use the absolute path to the readme.md file
-readme_path = os.path.join(git_root, 'readme.md')
+readme_path = os.path.join(HERE, 'readme.md')
 
 # Check if the readme.md file exists
 if os.path.exists(readme_path):
