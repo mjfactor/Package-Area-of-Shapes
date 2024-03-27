@@ -10,7 +10,10 @@ from os import path
 HERE = path.abspath(path.dirname(__file__))
 
 # Get the latest tag
-latest_tag = subprocess.check_output(["git", "describe", "--tags"]).strip().decode('utf-8')
+try:
+    latest_tag = subprocess.check_output(["git", "describe", "--tags"]).strip().decode('utf-8')
+except subprocess.CalledProcessError:
+    latest_tag = "0.0.1"  # Default version if not a Git repository
 
 with open(path.join(HERE, 'readme.md'), encoding='utf-8') as f:
     long_description = f.read()
