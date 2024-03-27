@@ -1,22 +1,20 @@
-import re
 import subprocess
-
+import re
 from setuptools import setup, find_packages
-
-from codecs import open
-from os import path
-
-HERE = path.abspath(path.dirname(__file__))
 
 # Get the latest tag in Git
 latest_tag = subprocess.getoutput('git describe --tags --abbrev=0')
-version = re.search(r'\d+\.\d+', latest_tag).group()
-with open(path.join(HERE, 'readme.md'), encoding='utf-8') as f:
-    long_description = f.read()
 
+# Parse the tag to get the version number
+match = re.search(r'\d+\.\d+', latest_tag)
+if match is None:
+    raise ValueError("No version number found in Git tag")
+version = match.group()
+
+# Your existing setup.py code
 setup(
     name='AreaOfShapesLib',
-    version=version,
+    version=version,  # Use the version number from the Git tag
     packages=find_packages(),
     url='https://github.com/mjfctor/ArithmeticOperations',
     license='MIT',
@@ -38,5 +36,4 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
     ],
-
 )
