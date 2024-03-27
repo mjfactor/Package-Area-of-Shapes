@@ -1,2 +1,0 @@
-from areaofShapesLib.myFunctions import *
-
