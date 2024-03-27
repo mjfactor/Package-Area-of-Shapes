@@ -1,0 +1,10 @@
+LICENSE
+setup.py
+AreaOfShapesLib.egg-info/PKG-INFO
+AreaOfShapesLib.egg-info/SOURCES.txt
+AreaOfShapesLib.egg-info/dependency_links.txt
+AreaOfShapesLib.egg-info/top_level.txt
+areaofShapesLib/__init__.py
+areaofShapesLib/myFunctions.py
+test/__init__.py
+test/test_myFunctions.py
