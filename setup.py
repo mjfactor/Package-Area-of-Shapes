@@ -12,7 +12,7 @@ def get_version():
     return version_locals['__version__']
 
 
-with open(os.path.join(HERE, 'README.md'), encoding='utf-8') as f:
+with open(os.path.join(HERE, 'readme.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
