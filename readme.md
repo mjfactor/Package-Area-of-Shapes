@@ -1,4 +1,4 @@
-# Get the Area of Shapes Library
+# Area of Shapes Package
 
 This is a simple Python library for performing arithmetic operations related to the area of different shapes.
 
