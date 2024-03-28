@@ -28,6 +28,12 @@ jobs:
       run: |
         VERSION=$(python -c "from version import __version__; print(__version__)")
         echo "VERSION=$VERSION" >> $GITHUB_ENV
+    - name: Create tag
+      run: |
+        git config --local user.email "emjayfactor@gmail.com"
+        git config --local user.name "mjfactor"
+        git tag $VERSION
+        git push https://${{ secrets.GH_PAT }}@github.com/mjfactor/Area-of-Shapes.git $VERSION
     - name: Create GitHub release
       run: |
         curl -X POST \
