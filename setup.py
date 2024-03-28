@@ -4,7 +4,7 @@ from version import __version__ as version
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 
-with open(os.path.join(HERE, 'readme.md'), 'r') as file:
+with open(os.path.join(HERE, 'README.md'), 'r') as file:
     long_description = file.read()
 
 setup(
