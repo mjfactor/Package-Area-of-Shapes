@@ -1,7 +1,7 @@
 graft areaOfShapesLib
 include pyproject.toml
 include setup.py
-include README.md
+include readme.md
 include version.py
 
 global-exclude *.py[cod]
