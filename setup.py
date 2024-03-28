@@ -32,7 +32,7 @@ else:
 
 setup(
     name='AreaOfShapesLib',
-    version="v3.4",
+    version=get_version(),
     packages=find_packages(),
     url='https://github.com/mjfctor/ArithmeticOperations',
     license='MIT',
