@@ -9,20 +9,10 @@ from os import path
 
 HERE = path.abspath(path.dirname(__file__))
 
-# Check if the current directory is a git repository it has at least one tag
-if os.path.exists('.git') and subprocess.call(['git', 'tag'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL) == 0:
-    # Get Latest Tag
-    git_describe_output = subprocess.check_output(["git", "describe", "--tags"]).strip().decode('utf-8')
-    # Extract the tag and the number of additional commits
-    match = re.match(r'(\d+\.\d+\.\d+)-(\d+)-g[a-f0-9]+', git_describe_output)
-    if match:
-        # Use the tag as the version, and append the number of additional commits as a post-release segment
-        version = f'{match.group(1)}.post{match.group(2)}'
-    else:
-        # If the output does not match the expected format, use the whole output as the version
-        version = git_describe_output
-else:
-    version = '0.0.0'  # Default version if not a git repository or no tags
+raw_version = subprocess.check_output(["git", "describe", "--tags"]).strip().decode("utf-8")
+
+# Make the version PEP 440 compliant
+version = raw_version.replace('-', '.', 1).replace('g', '')
 
 # Use the absolute path to the readme.md file
 readme_path = os.path.join(HERE, 'readme.md')
