@@ -9,10 +9,14 @@ from os import path
 
 HERE = path.abspath(path.dirname(__file__))
 
-raw_version = subprocess.check_output(["git", "describe", "--tags"]).strip().decode("utf-8")
 
-# Make the version PEP 440 compliant
-version = raw_version.replace('-', '.', 1).replace('g', '')
+# Get the version from the version.py file
+def get_version():
+    version_locals = {}
+    with open("areaOfShapesLib/version.py", 'r') as f:
+        exec(f.read(), None, version_locals)
+    return version_locals['__version__']
+
 
 # Use the absolute path to the readme.md file
 readme_path = os.path.join(HERE, 'readme.md')
@@ -28,7 +32,7 @@ else:
 
 setup(
     name='AreaOfShapesLib',
-    version=version,
+    version="v3.4",
     packages=find_packages(),
     url='https://github.com/mjfctor/ArithmeticOperations',
     license='MIT',
