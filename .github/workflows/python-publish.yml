@@ -32,10 +32,15 @@ jobs:
         git config --local user.name "${{ secrets.USER_NAME }}"
         git tag $VERSION
         git push https://${{ secrets.GH_PAT }}@github.com/mjfactor/Package-Area-of-Shapes.git $VERSION
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GH_TOKEN }}
+        branch: ${{ github.ref }}
     - name: Build package
       run: python -m build
     - name: Publish package
-      uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+      uses: pypa/gh-action-pypi-publish@master
       with:
         user: __token__
         password: ${{ secrets.PYPI_API_TOKEN }}
