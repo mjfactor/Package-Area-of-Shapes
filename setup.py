@@ -1,59 +1,44 @@
 import os
-import re
-import subprocess
-import setuptools
-from setuptools import setup, find_packages
+from setuptools import setup, find_namespace_packages
 
-from codecs import open
-from os import path
-
-HERE = path.abspath(path.dirname(__file__))
+HERE = os.path.abspath(os.path.dirname(__file__))
 
 
-# Get the version from the version.py file
 def get_version():
     version_locals = {}
-    version_file_path = os.path.join(HERE, "AreaOfShapesLib/areaOfShapesLib/version.py")
+    version_file_path = os.path.join(HERE, "AreaOfShapesLib", "areaOfShapesLib", "version.py")
     with open(version_file_path, 'r') as f:
         exec(f.read(), None, version_locals)
     return version_locals['__version__']
 
 
-# Use the absolute path to the readme.md file
-readme_path = os.path.join(HERE, 'readme.md')
-
-# Check if the readme.md file exists
-if os.path.exists(readme_path):
-    with open(readme_path, encoding='utf-8') as f:
-        long_description = f.read()
-else:
-    long_description = ''  # Default description if readme.md does not exist
-
-# ...
+with open(os.path.join(HERE, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name='AreaOfShapesLib',
     version=get_version(),
-    packages=find_packages(),
+    packages=find_namespace_packages(),
     url='https://github.com/mjfctor/ArithmeticOperations',
     license='MIT',
     author='mjfctor',
     author_email='emjayfactor@gmail.com',
     description='A Python library for performing arithmetic operations related to the area of different shapes',
-    long_description=long_description,  # Use the long_description variable
+    long_description=long_description,
     long_description_content_type='text/markdown',
     install_requires=[
-
+        # Add dependencies here if any
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
     ],
-
+    python_requires='>=3.6',
 )
