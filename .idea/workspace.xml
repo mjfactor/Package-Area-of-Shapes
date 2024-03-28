@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27d0f3ef-f755-48aa-98f7-104072a8eb29" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AreaOfShapesLib.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AreaOfShapesLib.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AreaOfShapesLib.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AreaOfShapesLib.egg-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/AreaOfShapesLib-4.0-py3-none-any.whl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/AreaOfShapesLib-4.0.tar.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/python-publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/python-publish.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AreaOfShapesLib.egg-info/PKG-INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AreaOfShapesLib.egg-info/SOURCES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AreaOfShapesLib.egg-info/dependency_links.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AreaOfShapesLib.egg-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/AreaOfShapesLib-4.0-py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/AreaOfShapesLib-4.0.tar.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/version.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +114,7 @@
       <workItem from="1711597078013" duration="35000" />
       <workItem from="1711597138091" duration="46000" />
       <workItem from="1711597208979" duration="36000" />
-      <workItem from="1711634202918" duration="9342000" />
+      <workItem from="1711634202918" duration="9644000" />
     </task>
     <servers />
   </component>

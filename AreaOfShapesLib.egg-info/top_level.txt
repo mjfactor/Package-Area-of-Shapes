@@ -1,3 +1,0 @@
-areaofShapesLib
-dist
-test
