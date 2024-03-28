@@ -26,7 +26,8 @@ jobs:
         pip install setuptools build
     - name: Extract version and create tag
       run: |
-        VERSION=$(python setup.py --version)
+        LATEST_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
+        VERSION=$(echo $LATEST_TAG | awk -F. '{$NF = $NF + 1;} 1' | sed 's/ /./g')
         echo "VERSION=$VERSION" >> $GITHUB_ENV
         git config --local user.email "emjayfactor@gmail.com"
         git config --local user.name "mjfactor"
