@@ -24,10 +24,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install setuptools build
-    - name: Check current directory
-      run: |
-        pwd
-        ls -la
     - name: Extract version and create tag
       run: |
         VERSION=$(python setup.py --version)

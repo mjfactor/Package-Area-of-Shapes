@@ -1,24 +1,15 @@
 import os
 from setuptools import setup, find_namespace_packages
+from version import __version__ as version
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 
-
-def get_version():
-    version_locals = {}
-    version_file_path = os.path.join(HERE, "AreaOfShapesLib", "version.py")
-    with open(version_file_path, 'r') as f:
-        exec(f.read(), None, version_locals)
-    return version_locals['__version__']
-
-
-with open(os.path.join(HERE, 'readme.md'), encoding='utf-8') as f:
-    long_description = f.read()
-
+with open(os.path.join(HERE, 'readme.md'), 'r') as file:
+    long_description = file.read()
 
 setup(
     name='AreaOfShapesLib',
-    version=get_version(),
+    version=version,
     packages=find_namespace_packages(),
     url='https://github.com/mjfctor/ArithmeticOperations',
     license='MIT',
@@ -42,4 +33,6 @@ setup(
         'Programming Language :: Python :: 3.9',
     ],
     python_requires='>=3.6',
+    package_data={'': ['readme.md']},  # Include README.md in the package
+    include_package_data=True  # Include package data files specified in MANIFEST.in
 )
