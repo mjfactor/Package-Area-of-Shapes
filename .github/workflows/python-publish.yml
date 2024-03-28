@@ -33,6 +33,17 @@ jobs:
         git config --local user.name "mjfactor"
         git tag $VERSION
         git push https://${{ secrets.GH_PAT }}@github.com/mjfactor/Package-Area-of-Shapes.git $VERSION
+    - name: Create GitHub release
+      run: |
+        curl -X POST \
+          -H "Authorization: token ${{ secrets.GH_PAT }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/mjfactor/Package-Area-of-Shapes/releases \
+          -d '{
+            "tag_name": "'"$VERSION"'",
+            "name": "'"$VERSION"'",
+            "body": "Release '"$VERSION"'"
+          }'
     - name: Build package
       run: python -m build
     - name: Publish package
