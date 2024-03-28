@@ -13,7 +13,7 @@ HERE = path.abspath(path.dirname(__file__))
 # Get the version from the version.py file
 def get_version():
     version_locals = {}
-    version_file_path = os.path.join(HERE, "areaOfShapesLib/version.py")
+    version_file_path = os.path.join(HERE, "AreaOfShapesLib/areaOfShapesLib/version.py")
     with open(version_file_path, 'r') as f:
         exec(f.read(), None, version_locals)
     return version_locals['__version__']
