@@ -1,7 +1,7 @@
 import os
 import re
 import subprocess
-
+import setuptools
 from setuptools import setup, find_packages
 
 from codecs import open

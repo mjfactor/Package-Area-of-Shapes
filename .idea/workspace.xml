@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27d0f3ef-f755-48aa-98f7-104072a8eb29" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/areaofShapesLib/version.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-    </list>
+    <list default="true" id="27d0f3ef-f755-48aa-98f7-104072a8eb29" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +105,7 @@
       <workItem from="1711597078013" duration="35000" />
       <workItem from="1711597138091" duration="46000" />
       <workItem from="1711597208979" duration="36000" />
-      <workItem from="1711634202918" duration="2832000" />
+      <workItem from="1711634202918" duration="3140000" />
     </task>
     <servers />
   </component>
