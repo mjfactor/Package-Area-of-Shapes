@@ -6,7 +6,7 @@ HERE = os.path.abspath(os.path.dirname(__file__))
 
 def get_version():
     version_locals = {}
-    version_file_path = os.path.join(HERE, "AreaOfShapesLib", "areaOfShapesLib", "version.py")
+    version_file_path = os.path.join(HERE, "AreaOfShapesLib", "version.py")
     with open(version_file_path, 'r') as f:
         exec(f.read(), None, version_locals)
     return version_locals['__version__']
@@ -14,6 +14,7 @@ def get_version():
 
 with open(os.path.join(HERE, 'readme.md'), encoding='utf-8') as f:
     long_description = f.read()
+
 
 setup(
     name='AreaOfShapesLib',
