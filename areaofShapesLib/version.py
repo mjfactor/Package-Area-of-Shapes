@@ -13,4 +13,4 @@ def get_latest_tag():
 version = get_latest_tag().split('-')[0]
 print(version)
 
-__version__ = 'v3.4'
+__version__ = '3.4'
